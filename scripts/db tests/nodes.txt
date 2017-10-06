@@ -1,0 +1,12 @@
+"nodes": [
+	{"group": 1, "id": "LUMS"}, 
+	{"group": 1, "id": "NUST"}, 
+	{"group": 1, "id": "GIKI University"}, 
+	{"group": 1, "id": "University of The Punjab"}, 
+	{"group": 1, "id": "Comsats Lahore"}, 
+	{"group": 1, "id": "Aga Khan University"}, 
+	{"group": 1, "id": "Iqra University - IU"}, 
+	{"group": 1, "id": "Virtual University of Pakistan"}, 
+	{"group": 1, "id": "IBA - Institute of Business Administration"}, 
+	{"group": 1, "id": "University Of Lahore"}
+]
