@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> Data Visualisation </title>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body>
+	<script>
+
+		var array = [20, 50, 60]
+		var width = 500
+		var height = 500
+		
+		var widthScale = d3.scale.linear()
+						.domain([0, 60])
+						.range([0, width])
+		var colorScale = d3.scale.linear()
+						.domain([0, 60])
+						.range(['red', 'blue'])
+
+		var canvas = d3.select("body")
+					.append("svg")
+					.attr("width", 500)
+					.attr("height", 500)
+
+		var bars = canvas.selectAll("rect")
+					.data(array)
+					.enter()
+						.append("rect")
+						.attr('width', function(d) {return widthScale(d)})
+						.attr('height', 50)
+						.attr('fill', function(d) {return colorScale(d)})
+						.attr('y', function(d, i) {return i*60})
+
+	</script>
+</body>
+
+</html>
