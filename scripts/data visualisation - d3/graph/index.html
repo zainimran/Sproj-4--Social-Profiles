@@ -15,7 +15,10 @@
 </style>
 <svg width="1360" height="760"></svg>
 <script src="d3.v4.min.js"></script>
+<script src="fisheye.js"></script>
 <script>
+
+d3.select("body").style("background-color", "black");
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -60,8 +63,8 @@ d3.json("miserables.json", function(error, graph) {
   simulation.force("link")
       .links(graph.links);
 
-  d3.select("body").transition()
-    .style("background-color", "black");
+  d3.select("body").transition().duration(2000)
+    .style("background-color", "white");
   
   function ticked() {
     link
@@ -74,6 +77,24 @@ d3.json("miserables.json", function(error, graph) {
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
   }
+
+  var fisheye = d3.fisheye.circular()
+    .radius(200)
+    .distortion(2);
+
+  svg.on("mousemove", function() {
+    fisheye.focus(d3.mouse(this));
+
+    node.each(function(d) { d.fisheye = fisheye(d); })
+        .attr("cx", function(d) { return d.fisheye.x; })
+        .attr("cy", function(d) { return d.fisheye.y; })
+        .attr("r", function(d) { return d.fisheye.z * 4.5; });
+
+    link.attr("x1", function(d) { return d.source.fisheye.x; })
+        .attr("y1", function(d) { return d.source.fisheye.y; })
+        .attr("x2", function(d) { return d.target.fisheye.x; })
+        .attr("y2", function(d) { return d.target.fisheye.y; });
+  });
 });
 
 function dragstarted(d) {
@@ -92,5 +113,4 @@ function dragended(d) {
   d.fx = null;
   d.fy = null;
 }
-
 </script>
