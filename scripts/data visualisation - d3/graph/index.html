@@ -60,6 +60,9 @@ d3.json("miserables.json", function(error, graph) {
   simulation.force("link")
       .links(graph.links);
 
+  d3.select("body").transition()
+    .style("background-color", "black");
+  
   function ticked() {
     link
         .attr("x1", function(d) { return d.source.x; })
