@@ -1,0 +1,22 @@
+Text Analytics:
+Explored various tools/libraries for the following features required for the project:
+1) Sentiment Analysis
+2) Topic Classification (Page classification based on the data from About)
+3) Text Comparison for similarity
+4) KeyWords Extraction
+Explored tools/libraries in detail:
+1) NLTK
+2) SCIKIT-LEARN
+3) Datumbox
+Selected tool for the project:
+- Datumbox
+Reasons for not selecting the other two:
+1) They require a model to be trained
+2) To train a model requires a dataset. Very limited dataset available on the internet for all the features mentioned that are required for the project.
+3) Training a model takes time, and accuracy can be low.
+4) Mainly available for python. Integration with javascript can be a hassle.
+Reasons for selecting Datumbox:
+1) Already trained models on large datasets on their online server
+2) Specifically built for text analysis
+3) Offers all the required features at one place
+4) Easy javascript integration -will allow us to use the services in real time taking very less time.

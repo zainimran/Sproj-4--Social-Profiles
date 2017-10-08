@@ -1,0 +1,1 @@
+{"ppnodes": [{"group": 1, "id": "PTI Punjab"}, {"group": 1, "id": "Pakistan Muslim League (N)"}, {"group": 1, "id": "Pakistan Peoples Party - PPP"}, {"group": 1, "id": "Awami National Party"}, {"group": 1, "id": "Jamaat-e-Islami Pakistan [Official]"}, {"group": 1, "id": "Jamiat Ulama-e-Islam Pakistan"}, {"group": 1, "id": "Pakistan Awami Tehreek (PAT)"}]}
