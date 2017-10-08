@@ -21,3 +21,10 @@ datum.topicClassification(data, function(err, data) {
 
     console.log(data);  // Remarks here.
 });
+
+datum.educationalDetection(data, function(err, data) {
+    if ( err )
+        return console.log(err);
+
+    console.log(data);  // Remarks here.
+});
